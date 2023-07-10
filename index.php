@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>BMI Calculator</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <h1>BMI Calculator</h1>
