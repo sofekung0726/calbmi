@@ -2,12 +2,17 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     padding: 20px;
+    background-image: url("./image/bg.jpg");
+    background-size: cover;
+   
   }
-  
+ 
   h1 {
     text-align: center;
   }
-  
+  form{
+    color: white    ;
+  }
   .form-group {
     margin-bottom: 20px;
   }

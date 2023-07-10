@@ -11,14 +11,11 @@
         <input type="text" name="weight" id="weight" required><br>
 
         <label for="height">Height (cm):</label>
-        <input type="text" name="height" id="height" required><br>
+        <input type="text" name="height" id="height" required><br> 
 
-        <input type="submit" value="Calculate BMI">
+        <input type="submit" value="Calculate BMI"> <br>
 
-        
-        
-    </form>
-    <?php
+        <?php
     
     // ตรวจสอบว่ามีการส่งข้อมูลแบบ POST หรือไม่
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,17 +29,20 @@
         $bmi = $weight / ($height * $height);
         echo "BMI: " . $bmi . "<br>";
         if ($bmi <18.5) {
-            echo "น้ำหนักน้อย / ผอม";
+            echo "รูปร่าง :น้ำหนักน้อย / ผอม";
         } elseif($bmi >=18.5 && $bmi <= 22.90) {
-            echo "ปกติ (สุขภาพดี)";
+            echo "รูปร่าง :ปกติ (สุขภาพดี)";
         } elseif($bmi >=23 && $bmi <= 24.90){
-            echo "ท้วม / โรคอ้วนระดับ 1 ";
+            echo "รูปร่าง :ท้วม / โรคอ้วนระดับ 1 ";
         } elseif ($bmi >=25 && $bmi <= 29.90){
-            echo "อ้วน / โรคอ้วนระดับ 2";
+            echo "รูปร่าง :อ้วน / โรคอ้วนระดับ 2";
         }else{
-            echo "อ้วนมาก / โรคอ้วนระดับ 3	";
+            echo "รูปร่าง :อ้วนมาก / โรคอ้วนระดับ 3	";
         }
     }
     ?>
+        
+    </form>
+   
 </body>
 </html>
