@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>BMI Calculator</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <h1>BMI Calculator</h1>
@@ -14,10 +15,11 @@
 
         <input type="submit" value="Calculate BMI">
 
-
+        
         
     </form>
     <?php
+    
     // ตรวจสอบว่ามีการส่งข้อมูลแบบ POST หรือไม่
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // รับค่าน้ำหนักและส่วนสูงจากฟอร์ม
@@ -28,11 +30,7 @@
         }
         // คำนวณ BMI
         $bmi = $weight / ($height * $height);
-
-    
-       
         echo "BMI: " . $bmi . "<br>";
-    }
         if ($bmi <18.5) {
             echo "น้ำหนักน้อย / ผอม";
         } elseif($bmi >=18.5 && $bmi <= 22.90) {
@@ -44,7 +42,7 @@
         }else{
             echo "อ้วนมาก / โรคอ้วนระดับ 3	";
         }
-        
+    }
     ?>
 </body>
 </html>
